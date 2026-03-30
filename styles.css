@@ -1,26 +1,27 @@
 :root {
-  --bg: #f5f3ee;
-  --bg-warm: #f8f6f1;
-  --bg-cool: #f0eeea;
-  --surface: rgba(255, 255, 255, 0.52);
-  --text: #2d2b3d;
-  --text-secondary: #4a4963;
-  --muted: #7b7d8e;
-  --line: rgba(45, 43, 61, 0.14);
-  --line-strong: rgba(45, 43, 61, 0.22);
-  --accent: #3a3868;
-  --accent-soft: #5c5a8a;
-  --accent-glow: rgba(58, 56, 104, 0.08);
-  --highlight: #6c63ff;
-  --highlight-soft: rgba(108, 99, 255, 0.06);
-  --max-width: 1180px;
+  --bg: #edf3ff;
+  --bg-warm: #ffffff;
+  --bg-cool: #eef4ff;
+  --surface: rgba(255, 255, 255, 0.96);
+  --surface-hover: rgba(255, 255, 255, 1);
+  --text: #17233b;
+  --text-secondary: #4f607d;
+  --muted: #7183a3;
+  --line: rgba(23, 35, 59, 0.12);
+  --line-strong: rgba(23, 35, 59, 0.2);
+  --accent: #3268ff;
+  --accent-soft: #5b8cff;
+  --accent-glow: rgba(50, 104, 255, 0.18);
+  --highlight: #8bb6ff;
+  --highlight-soft: rgba(139, 182, 255, 0.16);
+  --max-width: 1100px;
   --gutter: clamp(24px, 4vw, 48px);
-  --shadow-sm: 0 4px 20px rgba(45, 43, 61, 0.04);
-  --shadow: 0 12px 40px rgba(45, 43, 61, 0.06);
-  --shadow-lg: 0 24px 64px rgba(45, 43, 61, 0.08);
+  --shadow-sm: 0 12px 30px rgba(28, 52, 110, 0.08);
+  --shadow: 0 22px 56px rgba(28, 52, 110, 0.11);
+  --shadow-lg: 0 32px 82px rgba(28, 52, 110, 0.16);
   --radius-sm: 12px;
-  --radius: 18px;
-  --radius-lg: 24px;
+  --radius: 22px;
+  --radius-lg: 32px;
   --radius-pill: 999px;
   --transition: 380ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -41,9 +42,10 @@ body {
   color: var(--text);
   background: var(--bg);
   background-image:
-    radial-gradient(ellipse 80% 60% at 10% 0%, rgba(108, 99, 255, 0.03), transparent),
-    radial-gradient(ellipse 60% 50% at 90% 100%, rgba(58, 56, 104, 0.04), transparent);
+    radial-gradient(ellipse 70% 50% at 10% 0%, rgba(50, 104, 255, 0.08), transparent),
+    radial-gradient(ellipse 50% 40% at 100% 100%, rgba(139, 182, 255, 0.12), transparent);
   background-attachment: fixed;
+  padding: 28px 0 48px;
 }
 
 section {
@@ -52,12 +54,18 @@ section {
 
 .slide {
   position: relative;
-  min-height: 100svh;
-  padding: 48px var(--gutter);
+  min-height: auto;
+  width: min(calc(100% - 28px), 1320px);
+  margin: 0 auto 22px;
+  padding: 56px calc(var(--gutter) + 12px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 32px;
+  gap: 40px;
+  border-radius: 36px;
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(18px);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 520ms cubic-bezier(0.4, 0, 0.2, 1), transform 520ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -68,22 +76,23 @@ section {
 }
 
 .slide:nth-child(odd) {
-  background: var(--bg-cool);
+  background: #f4f8ff;
 }
 
 .slide:first-child,
 .slide:last-child {
-  background: var(--bg);
+  background: #ffffff;
 }
 
 .slide::after {
   content: "";
   position: absolute;
-  inset: 16px var(--gutter);
+  inset: 10px;
   border: 1px solid var(--line);
-  border-radius: var(--radius-lg);
+  border-radius: 28px;
   pointer-events: none;
   transition: border-color var(--transition);
+  background: transparent;
 }
 
 .slide:hover::after {
@@ -115,17 +124,17 @@ section {
 .slide-footer,
 .price-value,
 .price-sub {
-  font-family: "Space Grotesk", sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 .logo {
   width: fit-content;
   margin: 0 auto;
-  font-size: clamp(2rem, 3vw, 2.8rem);
-  font-weight: 700;
-  letter-spacing: -0.06em;
+  font-size: clamp(1.25rem, 1.7vw, 1.5rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
   color: var(--accent);
-  opacity: 0.7;
+  opacity: 0.95;
   transition: opacity var(--transition);
 }
 
@@ -135,7 +144,7 @@ section {
 
 .logo--corner {
   margin: 0 0 0 auto;
-  font-size: clamp(1.5rem, 2vw, 2.2rem);
+  font-size: clamp(1rem, 1.2vw, 1.2rem);
 }
 
 .cover-meta,
@@ -149,35 +158,37 @@ section {
 
 .slide h1,
 .slide h2 {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: -0.07em;
-  color: var(--accent);
+  margin: 0 0 16px;
+  text-transform: none;
+  letter-spacing: -0.05em;
+  color: var(--text);
 }
 
 .slide h1 {
   align-self: center;
   text-align: center;
-  font-size: clamp(4rem, 10vw, 8.4rem);
-  line-height: 0.90;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  font-size: clamp(2.7rem, 5.6vw, 4.8rem);
+  font-weight: 800;
+  line-height: 0.98;
+  color: var(--text);
+  background: none;
+  -webkit-text-fill-color: currentColor;
 }
 
 .slide h2 {
-  font-size: clamp(2.6rem, 6vw, 5.4rem);
-  line-height: 0.92;
+  font-size: clamp(2rem, 3.8vw, 3rem);
+  font-weight: 800;
+  line-height: 1.02;
 }
 
 .slide h3 {
   margin: 0;
-  font-size: clamp(1.18rem, 2vw, 1.8rem);
-  line-height: 1.08;
-  text-transform: uppercase;
+  font-size: clamp(1.04rem, 1.35vw, 1.22rem);
+  font-weight: 700;
+  line-height: 1.25;
+  text-transform: none;
   letter-spacing: -0.03em;
-  color: var(--accent-soft);
+  color: var(--text);
 }
 
 .cover-meta {
@@ -189,30 +200,31 @@ section {
   padding: 8px 20px;
   border: 1px solid var(--line);
   border-radius: var(--radius-pill);
-  font-size: 0.88rem;
+  font-size: 0.8rem;
   font-weight: 600;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--muted);
-  background: var(--surface);
+  background: #f6f9ff;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
 }
 
 .cover-note {
-  max-width: 700px;
+  max-width: 620px;
   margin: 0 auto;
+  padding: 0 16px;
   text-align: center;
-  font-size: clamp(1.02rem, 1.7vw, 1.28rem);
-  line-height: 1.65;
+  font-size: clamp(1rem, 1.35vw, 1.12rem);
+  line-height: 1.78;
   text-wrap: balance;
-  color: var(--muted);
+  color: var(--text-secondary);
 }
 
 .slide--cover {
   align-items: stretch;
   text-align: center;
-  background:
-    radial-gradient(ellipse 50% 40% at 50% 20%, var(--accent-glow), transparent),
-    var(--bg) !important;
+  background: #ffffff !important;
 }
 
 .slide--cover .logo {
@@ -220,35 +232,40 @@ section {
   opacity: 1;
 }
 
+.slide--cover .cover-meta {
+  background: #eaf1ff;
+  border-color: rgba(50, 104, 255, 0.16);
+}
+
 .slide--text {
   justify-content: center;
 }
 
 .slide--text .slide-body {
-  text-align: center;
+  text-align: left;
 }
 
 .divider {
-  width: 64px;
-  height: 3px;
-  margin: 20px auto 32px;
-  background: linear-gradient(90deg, var(--highlight), var(--accent-soft));
-  border-radius: 4px;
-  opacity: 0.5;
+  width: 56px;
+  height: 6px;
+  margin: 18px 0 32px;
+  background: var(--accent);
+  border-radius: 999px;
+  opacity: 1;
 }
 
 .slide--text p {
-  max-width: 920px;
-  margin: 0 auto 20px;
-  font-size: clamp(1.14rem, 2vw, 1.6rem);
-  line-height: 1.52;
+  max-width: 780px;
+  margin: 0 0 18px;
+  font-size: clamp(1rem, 1.34vw, 1.1rem);
+  line-height: 1.78;
 }
 
 .card-row {
-  margin-top: 42px;
+  margin-top: 48px;
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 28px;
+  gap: 24px;
   align-items: stretch;
 }
 
@@ -259,20 +276,21 @@ section {
 
 .card {
   position: relative;
-  min-height: 340px;
-  padding: 44px 26px 26px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  background: var(--surface);
-  backdrop-filter: blur(12px);
+  min-height: auto;
+  padding: 34px 26px 26px;
+  border: 1px solid rgba(50, 104, 255, 0.1);
+  border-radius: 24px;
+  background: #ffffff;
+  backdrop-filter: blur(10px);
   box-shadow: var(--shadow);
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-6px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--line-strong);
+  border-color: rgba(50, 104, 255, 0.22);
+  background: var(--surface-hover);
 }
 
 .card-number {
@@ -282,37 +300,40 @@ section {
   transform: translateX(-50%);
   display: grid;
   place-items: center;
-  width: 40px;
-  height: 40px;
-  border: 1px solid var(--line-strong);
+  width: 42px;
+  height: 42px;
+  border: 0;
   border-radius: var(--radius-pill);
-  background: var(--bg);
-  font-size: 1.05rem;
+  background: var(--accent);
+  font-size: 0.98rem;
   font-weight: 700;
-  color: var(--accent-soft);
+  color: #ffffff;
   box-shadow: var(--shadow-sm);
 }
 
 .card h3 {
-  min-height: 72px;
-  text-align: center;
-  margin-bottom: 16px;
+  min-height: 0;
+  text-align: left;
+  margin-bottom: 14px;
 }
 
 .card p,
 .card li {
-  font-size: 1.02rem;
-  line-height: 1.42;
+  font-size: 0.96rem;
+  line-height: 1.72;
   color: var(--text-secondary);
 }
 
 .card ul {
   margin: 0;
-  padding-left: 20px;
+  padding-left: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .card li + li {
-  margin-top: 8px;
+  margin-top: 0;
 }
 
 .slide--split {
@@ -321,67 +342,75 @@ section {
 
 .pricing-layout {
   display: grid;
-  grid-template-columns: 0.8fr 1.2fr;
-  gap: 48px;
-  align-items: center;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 40px;
+  align-items: start;
 }
 
 .pricing-narrative {
-  max-width: 380px;
+  max-width: 460px;
 }
 
 .pricing-narrative p {
   margin: 0;
-  font-size: clamp(1.16rem, 1.8vw, 1.44rem);
-  line-height: 1.42;
+  font-size: clamp(1rem, 1.34vw, 1.1rem);
+  line-height: 1.8;
 }
 
 .conditions-box {
   width: fit-content;
-  margin-top: 28px;
-  padding: 14px 22px;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--radius);
-  background: var(--surface);
-  backdrop-filter: blur(8px);
+  margin-top: 32px;
+  padding: 16px 22px;
+  border: 1px solid rgba(50, 104, 255, 0.14);
+  border-radius: 20px;
+  background: #f3f7ff;
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow-sm);
 }
 
 .conditions-box p {
-  font-size: 0.98rem;
-  line-height: 1.28;
-  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.price-card:nth-child(2),
+.price-card--wide {
+  background: #eef4ff;
+  border-color: rgba(50, 104, 255, 0.16);
 }
 
 .pricing-cards {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 18px 22px;
+  gap: 20px;
   align-items: start;
 }
 
 .price-card {
-  padding: 28px 24px 24px;
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  min-height: 220px;
-  text-align: center;
-  background: var(--surface);
-  backdrop-filter: blur(12px);
+  padding: 26px 22px 22px;
+  border: 1px solid rgba(50, 104, 255, 0.1);
+  border-radius: 24px;
+  min-height: 180px;
+  text-align: left;
+  background: #ffffff;
+  backdrop-filter: blur(16px);
   box-shadow: var(--shadow);
-  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition);
+  transition: transform var(--transition), box-shadow var(--transition), border-color var(--transition), background var(--transition);
 }
 
 .price-card:hover {
-  transform: translateY(-3px);
+  transform: translateY(-5px);
   box-shadow: var(--shadow-lg);
-  border-color: var(--line-strong);
+  border-color: rgba(50, 104, 255, 0.22);
+  background: var(--surface-hover);
 }
 
 .price-card--wide {
   grid-column: 1 / span 2;
-  max-width: 340px;
-  justify-self: center;
-  min-height: 200px;
+  max-width: none;
+  justify-self: stretch;
+  min-height: 160px;
 }
 
 .price-sub {
@@ -393,16 +422,16 @@ section {
 
 .price-value {
   margin: 0;
-  font-size: clamp(1.4rem, 2.2vw, 2rem);
-  line-height: 1.1;
+  font-size: clamp(1.2rem, 1.6vw, 1.5rem);
+  line-height: 1.15;
   text-transform: uppercase;
-  color: var(--accent-soft);
+  color: var(--accent);
 }
 
 .price-detail {
-  margin: 14px 0 0;
-  font-size: 1rem;
-  line-height: 1.4;
+  margin: 12px 0 0;
+  font-size: 0.95rem;
+  line-height: 1.72;
 }
 
 .slide--phases {
@@ -410,18 +439,21 @@ section {
 }
 
 .phase-list {
-  margin-top: 40px;
+  margin-top: 48px;
   display: grid;
-  gap: 8px;
+  gap: 18px;
 }
 
 .phase {
   display: grid;
-  grid-template-columns: 84px 1fr;
-  gap: 28px;
+  grid-template-columns: 64px 1fr;
+  gap: 24px;
   align-items: start;
-  padding: 20px 0;
-  border-top: 1px solid var(--line);
+  padding: 22px 26px;
+  border-top: 0;
+  border-radius: 24px;
+  background: #ffffff;
+  box-shadow: var(--shadow-sm);
 }
 
 .phase:first-child {
@@ -429,17 +461,14 @@ section {
 }
 
 .phase-letter {
-  font-size: clamp(3.6rem, 7vw, 5.4rem);
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
   font-weight: 700;
-  line-height: 0.86;
-  background: linear-gradient(180deg, var(--accent), var(--accent-soft));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  line-height: 1;
+  color: var(--accent);
 }
 
 .phase h3 {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
 .phase ul {
@@ -448,52 +477,54 @@ section {
 }
 
 .phase li {
-  font-size: clamp(1rem, 1.7vw, 1.2rem);
-  line-height: 1.48;
+  font-size: clamp(0.94rem, 1.18vw, 1.02rem);
+  line-height: 1.72;
   color: var(--text-secondary);
 }
 
 .phase li + li {
-  margin-top: 6px;
+  margin-top: 10px;
 }
 
 .slide--closing {
   align-items: center;
   justify-content: center;
   text-align: center;
-  background:
-    radial-gradient(ellipse 50% 40% at 50% 60%, var(--accent-glow), transparent),
-    var(--bg) !important;
+  background: #f4f8ff !important;
 }
 
 .slide--closing h2 {
-  max-width: 860px;
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-soft) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  max-width: 680px;
+  color: var(--text);
+  background: none;
+  -webkit-text-fill-color: currentColor;
+}
+
+.slide--closing .logo {
+  color: var(--accent);
 }
 
 .closing-pill {
   min-width: min(640px, 100%);
-  padding: 18px 36px;
-  border: 1px solid var(--line-strong);
+  padding: 24px 44px;
+  border: 1px solid rgba(50, 104, 255, 0.12);
   border-radius: var(--radius-pill);
-  background: var(--surface);
-  backdrop-filter: blur(12px);
+  background: #ffffff;
+  backdrop-filter: blur(16px);
   box-shadow: var(--shadow);
 }
 
 .closing-pill p {
   margin: 0;
-  font-size: clamp(1.24rem, 2vw, 1.68rem);
+  font-size: clamp(1rem, 1.4vw, 1.18rem);
+  line-height: 1.75;
   color: var(--text-secondary);
 }
 
 .closing-url {
-  margin-top: 6vh;
-  font-size: clamp(1.08rem, 1.8vw, 1.5rem);
-  letter-spacing: -0.03em;
+  margin-top: 5vh;
+  font-size: clamp(0.9rem, 1.2vw, 1.08rem);
+  letter-spacing: -0.02em;
   text-transform: uppercase;
   color: var(--muted);
   opacity: 0.7;
@@ -512,7 +543,7 @@ section {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--muted);
-  opacity: 0.65;
+  opacity: 0.82;
 }
 
 @media (max-width: 1080px) {
@@ -535,21 +566,36 @@ section {
 
 @media (max-width: 920px) {
   .slide {
-    padding: 36px 28px;
+    width: min(calc(100% - 20px), 1320px);
+    padding: 40px 28px;
     gap: 28px;
+    border-radius: 28px;
   }
 
   .slide::after {
-    inset: 14px 28px;
+    inset: 10px;
+  }
+
+  .slide h1 {
+    font-size: clamp(2.2rem, 6vw, 3.2rem);
   }
 
   .slide h2 {
-    font-size: clamp(2.4rem, 7vw, 4.4rem);
+    font-size: clamp(1.6rem, 4.5vw, 2.2rem);
+  }
+
+  .slide h3 {
+    font-size: 1rem;
   }
 
   .card-row,
   .pricing-cards {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .card-row {
+    margin-top: 32px;
   }
 
   .card:hover {
@@ -561,16 +607,22 @@ section {
   }
 
   .pricing-layout {
-    gap: 28px;
+    gap: 24px;
   }
 
   .phase {
-    grid-template-columns: 68px 1fr;
-    gap: 18px;
+    grid-template-columns: 52px 1fr;
+    gap: 14px;
+    padding: 18px 20px;
   }
 
   .phase-letter {
-    font-size: clamp(3rem, 8vw, 4.4rem);
+    font-size: 2rem;
+  }
+
+  .phase-list {
+    margin-top: 32px;
+    gap: 14px;
   }
 
   .price-card,
@@ -584,124 +636,373 @@ section {
     min-width: 0;
     width: 100%;
     border-radius: var(--radius-lg);
+    padding: 20px 32px;
+  }
+
+  .cover-note {
+    font-size: 0.95rem;
   }
 }
 
 @media (max-width: 720px) {
+  body {
+    padding: 16px 0 32px;
+  }
+
   .slide {
     min-height: auto;
+    width: calc(100% - 14px);
     padding: 32px 20px;
-    gap: 24px;
+    gap: 20px;
+    border-radius: 22px;
+    margin-bottom: 14px;
   }
 
   .slide::after {
-    inset: 12px 16px;
-    border-radius: var(--radius);
+    inset: 7px;
+    border-radius: 18px;
   }
 
   .slide h1 {
-    font-size: clamp(2.8rem, 14vw, 4.6rem);
+    font-size: clamp(1.75rem, 7vw, 2.4rem);
+    line-height: 1.05;
   }
 
   .slide h2 {
-    font-size: clamp(2rem, 10vw, 3.6rem);
+    font-size: clamp(1.4rem, 5.5vw, 1.85rem);
+    line-height: 1.1;
+    margin-bottom: 12px;
   }
 
   .slide h3 {
-    font-size: 1.08rem;
+    font-size: 0.92rem;
+    line-height: 1.3;
   }
 
   .slide--text p,
-  .pricing-narrative p,
+  .pricing-narrative p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+  }
+
   .phase li,
   .card p,
   .card li,
-  .price-detail,
+  .price-detail {
+    font-size: 0.86rem;
+    line-height: 1.65;
+  }
+
   .cover-note {
-    font-size: 0.98rem;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    padding: 0 8px;
+  }
+
+  .card {
+    padding: 30px 20px 20px;
+    border-radius: 20px;
+  }
+
+  .card-row {
+    margin-top: 24px;
+    gap: 18px;
+  }
+
+  .card h3 {
+    margin-bottom: 10px;
+  }
+
+  .card ul {
+    gap: 6px;
+  }
+
+  .card-number {
+    width: 38px;
+    height: 38px;
+    font-size: 0.9rem;
+    top: -18px;
   }
 
   .phase {
     grid-template-columns: 1fr;
     gap: 8px;
+    padding: 18px 18px;
+    border-radius: 20px;
   }
 
   .phase-letter {
-    font-size: 3.2rem;
+    font-size: 1.8rem;
+  }
+
+  .phase-list {
+    margin-top: 24px;
+    gap: 12px;
+  }
+
+  .phase h3 {
+    margin-bottom: 8px;
+  }
+
+  .phase ul {
+    padding-left: 20px;
+  }
+
+  .phase li + li {
+    margin-top: 6px;
+  }
+
+  .price-card {
+    padding: 22px 18px 18px;
+    border-radius: 20px;
+    min-height: auto;
+  }
+
+  .price-value {
+    font-size: 1.15rem;
+  }
+
+  .price-sub {
+    font-size: 0.88rem;
+  }
+
+  .price-detail {
+    margin-top: 8px;
+  }
+
+  .conditions-box {
+    padding: 14px 18px;
+    margin-top: 20px;
+    border-radius: 16px;
+  }
+
+  .conditions-box p {
+    font-size: 0.84rem;
+  }
+
+  .pricing-cards {
+    gap: 14px;
+  }
+
+  .pricing-layout {
+    gap: 20px;
+  }
+
+  .closing-pill {
+    padding: 18px 22px;
+    border-radius: var(--radius);
+  }
+
+  .closing-pill p {
+    font-size: 0.88rem;
   }
 
   .slide-footer {
     justify-content: center;
     text-align: center;
-    font-size: 0.9rem;
+    font-size: 0.82rem;
+    gap: 10px;
+  }
+
+  .slide--text .slide-body,
+  .card h3,
+  .price-card {
+    text-align: left;
+  }
+
+  .divider {
+    width: 44px;
+    height: 5px;
+    margin: 12px 0 20px;
   }
 
   .closing-url {
-    margin-top: 4vh;
+    margin-top: 3vh;
+    font-size: 0.82rem;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+  }
+
+  .logo--corner {
+    font-size: 0.9rem;
+  }
+
+  .cover-meta {
+    padding: 6px 16px;
+    font-size: 0.72rem;
+  }
+
+  .slide--cover .logo {
+    margin-top: 3vh;
   }
 }
 
 @media (max-width: 420px) {
+  body {
+    padding: 12px 0 24px;
+  }
+
   .slide {
-    padding: 22px 14px;
+    width: calc(100% - 10px);
+    padding: 26px 16px;
     gap: 18px;
+    border-radius: 18px;
+    margin-bottom: 12px;
   }
 
   .slide::after {
-    inset: 8px 14px;
-    border-radius: var(--radius-sm);
+    inset: 5px;
+    border-radius: 14px;
   }
 
   .slide h1 {
-    font-size: clamp(2.6rem, 13vw, 3.8rem);
+    font-size: clamp(1.5rem, 8vw, 2rem);
+    line-height: 1.08;
+  }
+
+  .slide h2 {
+    font-size: clamp(1.25rem, 6vw, 1.55rem);
+    line-height: 1.12;
+    margin-bottom: 10px;
   }
 
   .slide h3 {
-    font-size: 1rem;
+    font-size: 0.86rem;
+  }
+
+  .slide--text p,
+  .pricing-narrative p {
+    font-size: 0.84rem;
+    line-height: 1.65;
+  }
+
+  .card p,
+  .card li,
+  .phase li,
+  .price-detail {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+  .cover-note {
+    font-size: 0.84rem;
+    line-height: 1.6;
   }
 
   .card {
-    padding: 36px 16px 16px;
+    padding: 28px 16px 18px;
+    border-radius: 18px;
   }
 
   .card h3 {
     min-height: auto;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
   }
 
   .card-number {
-    width: 36px;
-    height: 36px;
-    font-size: 0.95rem;
-    top: -18px;
+    width: 34px;
+    height: 34px;
+    font-size: 0.85rem;
+    top: -16px;
+  }
+
+  .card ul {
+    gap: 5px;
+    padding-left: 16px;
+  }
+
+  .card-row {
+    margin-top: 20px;
+    gap: 16px;
+  }
+
+  .phase {
+    padding: 16px 14px;
+    border-radius: 18px;
+    gap: 6px;
+  }
+
+  .phase-letter {
+    font-size: 1.5rem;
   }
 
   .phase ul {
-    padding-left: 18px;
+    padding-left: 16px;
   }
 
-  .conditions-box,
-  .closing-pill {
-    padding: 14px 16px;
+  .phase li + li {
+    margin-top: 5px;
   }
 
-  .closing-pill {
-    border-radius: var(--radius);
+  .phase-list {
+    margin-top: 20px;
+    gap: 10px;
   }
 
-  .slide-footer {
-    gap: 6px;
+  .price-card {
+    padding: 18px 16px 16px;
+    border-radius: 18px;
+  }
+
+  .price-value {
+    font-size: 1.05rem;
+  }
+
+  .price-sub {
     font-size: 0.82rem;
   }
 
+  .conditions-box {
+    padding: 12px 14px;
+    border-radius: 14px;
+    margin-top: 16px;
+  }
+
+  .conditions-box p {
+    font-size: 0.8rem;
+  }
+
+  .pricing-cards {
+    gap: 12px;
+  }
+
+  .closing-pill {
+    padding: 14px 16px;
+    border-radius: 16px;
+  }
+
+  .closing-pill p {
+    font-size: 0.84rem;
+  }
+
+  .slide-footer {
+    gap: 5px;
+    font-size: 0.76rem;
+  }
+
   .cover-meta {
-    padding: 6px 14px;
-    font-size: 0.78rem;
+    padding: 5px 12px;
+    font-size: 0.68rem;
+  }
+
+  .closing-url {
+    font-size: 0.76rem;
   }
 
   .divider {
-    width: 48px;
-    margin: 14px auto 22px;
+    width: 40px;
+    height: 4px;
+    margin: 10px 0 16px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .logo--corner {
+    font-size: 0.85rem;
   }
 }
 
@@ -709,10 +1010,12 @@ section {
   body {
     background: #fff !important;
     background-image: none !important;
+    padding: 0 !important;
   }
 
   .slide {
     min-height: auto;
+    width: 100%;
     break-after: page;
     break-inside: avoid;
     opacity: 1 !important;
