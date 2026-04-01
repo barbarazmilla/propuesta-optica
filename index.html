@@ -1,224 +1,337 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reporte de Implementacion | Paz Cornu x ImpulzIA</title>
-  <meta name="description" content="Reporte ejecutivo de implementacion y mejoras realizadas para Paz Cornu por ImpulzIA.">
+  <title>Propuesta de servicio | Desarrollo de tienda online para óptica</title>
+  <meta name="description" content="Propuesta comercial premium para el desarrollo de e-commerce para óptica en Argentina. Tiendanube y Shopify. ImpulzIA.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <section class="slide slide--cover">
-    <span class="logo">impulzIA</span>
-    <div class="cover-meta">Reporte Ejecutivo · Marzo 2026</div>
-    <h1>Reporte de<br>Implementacion<br>y Mejoras</h1>
-    <p class="cover-note">Setup piloto orientado a reducir friccion, ordenar la trazabilidad y dejar la operacion lista para escalar Ads con criterio.</p>
+
+  <!-- HERO / PORTADA -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <img src="impulzia_logo_exact.svg" alt="Impulzia" class="hero-logo" style="height:38px; margin-bottom:10px;" />
+      <h1 style="font-size:2.4rem; font-weight:800; color:#232323; margin-bottom:10px; line-height:1.13;">Propuesta de servicio</h1>
+      <h2 style="font-size:1.45rem; font-weight:600; color:#3268ff; margin:0 0 18px 0; line-height:1.18;">Desarrollo de tienda online para óptica</h2>
+      <p class="hero-sub" style="font-size:1.08rem; color:#4f607d; font-weight:400; margin-bottom:26px; line-height:1.7; max-width:540px;">Desarrollo integral de e-commerce autoadministrable, optimizado para conversión, SEO y escalabilidad comercial.</p>
+      <a href="#alternativas" class="hero-btn">Ver alternativas</a>
+    </div>
+  </section>
+
+  <!-- PORTADA / HERO (legacy, oculto para transición) -->
+  <section class="slide slide--cover" style="display:none;">
+    <img src="impulzia_logo_exact.svg" alt="Impulzia" class="logo" style="height:48px; margin:0 auto 18px auto; display:block;"/>
+    <div class="cover-meta">Propuesta Comercial · Marzo 2026</div>
+    <h1>Propuesta de servicio<br>Desarrollo de tienda online para óptica</h1>
+    <p class="cover-note">Desarrollo integral de e-commerce autoadministrable, optimizado para conversión, SEO y escalabilidad comercial.</p>
     <footer class="slide-footer">
-      <span>Paz Cornu</span>
-      <span>ImpulzIA</span>
+      <span>Óptica</span>
+      <span><img src="impulzia_logo_exact.svg" alt="Impulzia" style="height:22px; vertical-align:middle; margin-bottom:2px;"/></span>
     </footer>
   </section>
 
-  <section class="slide slide--text">
-    <div class="slide-body narrow">
-      <h2>Resumen<br>Ejecutivo</h2>
-      <div class="divider"></div>
-      <p>
-        A partir del diagnostico inicial, detectamos que, si bien existe un alto trafico e intencion de compra,
-        era necesario reducir las fricciones en el embudo de ventas antes de escalar la inversion publicitaria.
-      </p>
-      <p>
-        Durante la fase de Setup, trabajamos sobre tres frentes que condicionaban la conversion: la experiencia
-        de compra dentro de la tienda, la infraestructura publicitaria y la velocidad de respuesta comercial.
-      </p>
-      <p>
-        El objetivo fue dejar una base operativa clara: una tienda mas limpia y navegable, un ecosistema de Meta
-        saneado y medible, automatizaciones para capturar demanda en caliente y un catalogo mejor preparado para
-        descubrimiento organico y cierre.
+  <!-- OBJETIVO -->
+  <section id="objetivo" class="objetivo-section">
+    <div class="objetivo-content">
+      <h2 class="objetivo-title">Objetivo</h2>
+      <div class="objetivo-underline"></div>
+      <p class="objetivo-parrafo">
+        Desarrollar una tienda online profesional para una óptica en Argentina, pensada para vender de forma clara, confiable y escalable, con foco en experiencia de usuario, conversión y facilidad operativa.<br>
+        La propuesta contempla la creación integral del e-commerce, incluyendo estructura del sitio, configuración comercial, medios de pago, carga inicial de productos, optimización base y puesta en marcha.
       </p>
     </div>
-    <footer class="slide-footer">
-      <span>ImpulzIA</span>
-      <span>Fase Setup / Piloto</span>
-    </footer>
   </section>
 
-  <section class="slide slide--cards">
-    <span class="logo logo--corner">impulzIA</span>
-    <div class="slide-body">
-      <h2>E-commerce y<br>Experiencia</h2>
+  <!-- ALTERNATIVAS DE PLATAFORMA -->
+  <section class="platform-section" id="alternativas">
+    <div class="platform-body">
+      <div class="platform-heading">
+        <h2 class="platform-section-title">Alternativas de plataforma</h2>
+        <div class="platform-section-underline"></div>
+        <p class="platform-section-subtitle">Elegí la opción que mejor se adapte a tu negocio</p>
+      </div>
+      <div class="platform-cards platform-cards--options">
+        <div class="platform-card platform-card--option">
+          <div class="platform-card-header">
+            <span class="platform-badge platform-badge--small">A</span>
+            <h3 class="platform-title">Opción <span class="platform-name">Tiendanube</span></h3>
+          </div>
+          <p class="platform-desc">Ideal para operación local simple de implementar y ampliamente adoptada en Argentina.</p>
+          <ul class="platform-list">
+            <li>Planes en pesos argentinos</li>
+            <li>Integración natural con operatoria local y medios de pago</li>
+            <li>Soporte en español y entorno amigable</li>
+            <li>Recomendada para negocios que venden principalmente en Argentina</li>
+          </ul>
+        </div>
+        <div class="platform-card platform-card--option">
+          <div class="platform-card-header">
+            <span class="platform-badge platform-badge--small">B</span>
+            <h3 class="platform-title">Opción <span class="platform-name">Shopify</span></h3>
+          </div>
+          <p class="platform-desc">Recomendada para foco en diseño, escalabilidad y personalización, con visión de crecimiento más ambiciosa.</p>
+          <ul class="platform-list">
+            <li>Mayor flexibilidad para crecer y personalizar</li>
+            <li>Ecosistema sólido de apps e integraciones</li>
+            <li>Integración con Mercado Pago disponible</li>
+            <li>Plataforma con estructura en USD y operación más dolarizada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- RECOMENDACIÓN ESTRATÉGICA (removida por pedido del cliente) -->
+
+  <!-- ALCANCE DEL SERVICIO BASE -->
+  <section class="alcance-section" id="alcance">
+    <div class="alcance-body">
+      <div class="alcance-heading">
+        <h2 class="alcance-title">Qué incluye el desarrollo</h2>
+        <div class="alcance-underline"></div>
+      </div>
+      <div class="card-row card-row--wide alcance-cards">
+        <article class="card">
+          <h3>Desarrollo e implementación</h3>
+          <ul>
+            <li>Configuración inicial de la tienda</li>
+            <li>Definición de estructura de navegación</li>
+            <li>Home principal y páginas internas esenciales</li>
+            <li>Configuración de categorías y colecciones</li>
+            <li>Diseño visual limpio, comercial y profesional</li>
+            <li>Adaptación mobile y responsive</li>
+            <li>Configuración de dominio</li>
+            <li>Integración con medios de pago y Mercado Pago</li>
+            <li>Configuración de envíos o retiro base</li>
+            <li>Carga inicial de hasta 30 productos base</li>
+            <li>Configuración de textos comerciales esenciales</li>
+            <li>Ajustes de confianza: políticas, contacto, preguntas frecuentes, medios de pago</li>
+            <li>Capacitación básica para autoadministración</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Optimización comercial, SEO y conversión</h3>
+          <ul>
+            <li>Estructura del sitio orientada a conversión</li>
+            <li>Configuración base SEO on-page</li>
+            <li>Optimización de títulos, descripciones y jerarquía de contenidos</li>
+            <li>URLs amigables y metadatos principales</li>
+            <li>Optimización de imágenes para web</li>
+            <li>Buenas prácticas de velocidad</li>
+            <li>Jerarquía de llamados a la acción</li>
+            <li>Ajustes comerciales en fichas de producto</li>
+            <li>Elementos de confianza para favorecer conversión</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVERSIÓN -->
+  <section class="section-clean" id="inversion">
+    <div class="section-body">
+      <div class="section-heading">
+        <h2 class="section-title">Cotización / propuesta en USD</h2>
+        <div class="section-underline"></div>
+      </div>
+      <div class="pricing-layout">
+        <div class="pricing-cards">
+          <article class="price-card">
+            <h3>Desarrollo tienda en Tiendanube</h3>
+            <p class="price-value">USD 200</p>
+            <p class="price-sub">Implementación y desarrollo</p>
+          </article>
+          <article class="price-card">
+            <h3>Desarrollo tienda en Shopify</h3>
+            <p class="price-value">USD 290</p>
+            <p class="price-sub">Implementación y desarrollo</p>
+          </article>
+        </div>
+        <div class="conditions-box" style="margin-top:24px;">
+          <p>Los valores corresponden a implementación y desarrollo. No incluyen abonos mensuales de plataforma, dominio, apps externas ni comisiones de medios de pago.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COSTOS DE PLATAFORMA -->
+  <section class="section-clean" id="costos">
+    <div class="section-body">
+      <div class="section-heading">
+        <h2 class="section-title">Costos mensuales de plataforma</h2>
+        <div class="section-underline"></div>
+      </div>
       <div class="card-row card-row--tall">
         <article class="card">
-          <span class="card-number">1</span>
-          <h3>Redise&ntilde;o Estetico</h3>
+          <h3>Tiendanube</h3>
           <ul>
-            <li>Implementacion de CSS personalizado en TiendaNube para ordenar la interfaz con una estetica minimalista y enfocada.</li>
-            <li>La tienda quedo alineada a una experiencia mas limpia, cercana a referencias de moda con lectura visual mas premium.</li>
+            <li>Esencial: AR$ 24.999 / mes</li>
+            <li>Impulso: AR$ 73.999 / mes</li>
+            <li>Escala: AR$ 219.999 / mes</li>
           </ul>
+          <p class="price-detail">Plan recomendado para comenzar: Esencial, salvo que el cliente requiera una operación más compleja.</p>
         </article>
         <article class="card">
-          <span class="card-number">2</span>
-          <h3>UX/UI y Velocidad</h3>
+          <h3>Shopify</h3>
           <ul>
-            <li>Ajustes en imagenes y recursos para mejorar tiempos de carga y navegacion, especialmente en mobile.</li>
-            <li>Se priorizo descubrimiento de productos, claridad en lectura y menor friccion durante la navegacion.</li>
+            <li>Basic: USD 19 / mes</li>
+            <li>Grow: USD 49 / mes</li>
+            <li>Advanced: USD 299 / mes</li>
           </ul>
-        </article>
-        <article class="card">
-          <span class="card-number">3</span>
-          <h3>Checkout Mas Simple</h3>
-          <ul>
-            <li>Simplificacion del recorrido de pago para reducir abandono de carritos.</li>
-            <li>Se ordenaron pasos y puntos de decision para que el cierre no rompa la intencion de compra generada antes.</li>
-          </ul>
+          <p class="price-detail">Referencia tomada sobre facturación anual (según disponibilidad de Shopify al momento de contratación).</p>
         </article>
       </div>
     </div>
-    <footer class="slide-footer">
-      <span>TiendaNube</span>
-      <span>Conversion y navegacion</span>
-    </footer>
   </section>
 
-  <section class="slide slide--cards slide--cards-wide">
-    <span class="logo logo--corner">impulzIA</span>
-    <div class="slide-body">
-      <h2>Meta Ads y<br>Medicion</h2>
+  <!-- SERVICIOS OPCIONALES -->
+  <section class="section-clean" id="opcionales">
+    <div class="section-body">
+      <div class="section-heading">
+        <h2 class="section-title">Servicios adicionales</h2>
+        <div class="section-underline"></div>
+      </div>
       <div class="card-row card-row--wide">
         <article class="card">
-          <span class="card-number">1</span>
-          <h3>Saneamiento de activos</h3>
+          <h3>Configuración comercial y publicitaria</h3>
           <ul>
-            <li>Recuperacion del control total sobre el portafolio empresarial dentro de Meta Business Suite.</li>
-            <li>Auditoria y limpieza de permisos heredados de usuarios o agencias ya desvinculadas del proyecto.</li>
+            <li>Creación o configuración de Meta Business Manager</li>
+            <li>Vinculación de Facebook e Instagram</li>
+            <li>Configuración de cuenta publicitaria y método de pago</li>
+            <li>Instalación o vinculación de píxel y eventos base</li>
+            <li>Configuración básica de catálogo para anuncios dinámicos</li>
+            <li>Revisión inicial de estructura para futuras campañas</li>
+          </ul>
+          <p class="price-value" style="margin-top:12px;">AR$ 90.000</p>
+          <p class="price-detail">No incluye inversión publicitaria ni gestión mensual de campañas.</p>
+        </article>
+        <article class="card">
+          <h3>Integración y automatización con ManyChat</h3>
+          <ul>
+            <li>Conexión base con Instagram / Facebook</li>
+            <li>Flujos de bienvenida y respuestas automáticas</li>
+            <li>Derivación a WhatsApp o tienda</li>
+            <li>Captura básica de leads o consultas</li>
+          </ul>
+          <p class="price-value" style="margin-top:12px;">AR$ 95.000</p>
+          <p class="price-detail">No incluye abono mensual de ManyChat ni costos asociados a WhatsApp/API si correspondieran.</p>
+        </article>
+        <article class="card">
+          <h3>Carga adicional de productos</h3>
+          <ul>
+            <li>Pack 30 productos adicionales: AR$ 65.000</li>
+            <li>Pack 60 productos adicionales: AR$ 120.000</li>
           </ul>
         </article>
         <article class="card">
-          <span class="card-number">2</span>
-          <h3>Nueva infraestructura</h3>
+          <h3>Edición de fotos para e-commerce</h3>
           <ul>
-            <li>Creacion y configuracion de una nueva cuenta publicitaria desde cero para trabajar con historial limpio.</li>
-            <li>Vinculacion correcta con TiendaNube y conexion oficial con Facebook e Instagram.</li>
+            <li>Limpieza de fondo</li>
+            <li>Ajustes de luz, contraste y encuadre</li>
+            <li>Uniformidad visual</li>
+            <li>Exportación optimizada para web</li>
+            <li>Opcional: ambientación o composición simple</li>
           </ul>
-        </article>
-        <article class="card">
-          <span class="card-number">3</span>
-          <h3>Trazabilidad lista</h3>
-          <ul>
-            <li>Configuracion de pixeles y conversiones para asegurar medicion consistente y lectura fiable de resultados.</li>
-            <li>El entorno quedo preparado para lanzar campa&ntilde;as con criterios de optimizacion reales.</li>
-          </ul>
+          <p class="price-value" style="margin-top:12px;">Pack 10 fotos: AR$ 35.000</p>
+          <p class="price-value">Pack 20 fotos: AR$ 60.000</p>
+          <p class="price-value">Pack 50 fotos: AR$ 135.000</p>
+          <p class="price-detail">Los packs consideran edición con criterio comercial y personalización visual.</p>
         </article>
       </div>
     </div>
-    <footer class="slide-footer">
-      <span>Meta Business &amp; Ads</span>
-      <span>Infraestructura limpia</span>
-    </footer>
   </section>
 
-  <section class="slide slide--split">
-    <div class="slide-body">
-      <div class="pricing-layout implementation-layout">
-        <div class="pricing-narrative implementation-narrative">
-          <h2>Automatizacion<br>y SEO</h2>
-          <p>
-            El trabajo no se limito a la pauta. Tambien cerramos fugas comerciales y mejoramos el punto donde
-            la intencion de compra se enfria: respuesta tardia, falta de informacion inmediata y fichas de producto
-            poco optimizadas para descubrimiento organico.
-          </p>
-          <div class="conditions-box">
-            <p><em>Objetivo: responder mas rapido, contener mejor la demanda y mejorar la claridad comercial del catalogo.</em></p>
-          </div>
-        </div>
-        <div class="pricing-cards implementation-cards">
+  <!-- PLAZOS -->
+  <section class="section-clean" id="plazos">
+    <div class="section-body">
+      <div class="section-heading">
+        <h2 class="section-title">Plazos estimados</h2>
+        <div class="section-underline"></div>
+      </div>
+      <div class="pricing-layout">
+        <div class="pricing-cards">
           <article class="price-card">
-            <h3>Manychat</h3>
-            <p class="price-detail">Desarrollo inicial de flujos de automatizacion para interacciones rapidas y respuestas predeterminadas.</p>
+            <h3>Tiendanube</h3>
+            <p class="price-value">7 a 15 días hábiles</p>
+            <p class="price-detail">Dependiendo de entrega de material, validaciones y complejidad del catálogo.</p>
           </article>
           <article class="price-card">
-            <h3>Atencion inmediata</h3>
-            <p class="price-detail">Respuestas automaticas basadas en palabras clave para precio, links exactos y preguntas frecuentes.</p>
-          </article>
-          <article class="price-card price-card--wide">
-            <h3>SEO de catalogo</h3>
-            <p class="price-detail">
-              Saneamiento y mejora integral de descripciones de productos para potenciar descubrimiento organico,
-              claridad para el usuario y consistencia comercial en la lectura del catalogo.
-            </p>
+            <h3>Shopify</h3>
+            <p class="price-value">7 a 15 días hábiles</p>
+            <p class="price-detail">Dependiendo del nivel de personalización, apps requeridas y validaciones del cliente.</p>
           </article>
         </div>
       </div>
     </div>
-    <footer class="slide-footer">
-      <span>Ecosistema conversacional</span>
-      <span>Prevencion de fuga de ventas</span>
-    </footer>
   </section>
 
-  <section class="slide slide--phases">
-    <span class="logo logo--corner">impulzIA</span>
-    <div class="slide-body">
-      <h2>Proximos<br>Pasos</h2>
-      <div class="phase-list">
-        <div class="phase">
-          <span class="phase-letter">A</span>
-          <div>
-            <h3>Gestion de Ads</h3>
-            <ul>
-              <li>Con la infraestructura saneada, la tienda optimizada y la automatizacion operativa, el proyecto ya esta listo para iniciar la gestion de Ads.</li>
-              <li>La siguiente fase permitira escalar inversion con trazabilidad total y foco en retorno sobre la inversion.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="phase">
-          <span class="phase-letter">B</span>
-          <div>
-            <h3>Mercado Libre Argentina y Chile</h3>
-            <ul>
-              <li>Abrir y estructurar el canal para su futura implementacion comercial.</li>
-              <li>Evaluar una app para integrar Mercado Libre con TiendaNube y Lince Indumentaria, sincronizando stock, productos y operacion.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="phase">
-          <span class="phase-letter">C</span>
-          <div>
-            <h3>Contenido pendiente en tienda</h3>
-            <ul>
-              <li>Completar la carga del material visual restante en TiendaNube.</li>
-              <li>Editar piezas seleccionadas antes de publicarlas para sostener una presentacion visual consistente.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="phase">
-          <span class="phase-letter">D</span>
-          <div>
-            <h3>Automatizar mailings</h3>
-            <ul>
-              <li>Reducir friccion en carros abandonados y reforzar la finalizacion de compra.</li>
-              <li>Extender la logica de automatizacion mas alla de mensajeria instantanea para recuperar demanda no capturada en el primer contacto.</li>
-            </ul>
-          </div>
-        </div>
+  <!-- REQUERIMIENTOS DEL CLIENTE -->
+  <section class="section-clean" id="requerimientos">
+    <div class="section-body section-body--narrow">
+      <div class="section-heading">
+        <h2 class="section-title">Información necesaria para avanzar</h2>
+        <div class="section-underline"></div>
       </div>
+      <ul>
+        <li>Logo y lineamiento visual base</li>
+        <li>Textos institucionales si ya existen</li>
+        <li>Listado de productos y precios</li>
+        <li>Fotografías (básicas, con teléfono está bien)</li>
+        <li>Categorías deseadas</li>
+        <li>Datos de medios de pago</li>
+        <li>Información de envíos o retiros</li>
+        <li>Accesos necesarios para configuración</li>
+      </ul>
     </div>
-    <footer class="slide-footer">
-      <span>Siguiente etapa</span>
-      <span>Escalar con control</span>
-    </footer>
   </section>
 
-  <section class="slide slide--closing">
-    <span class="logo">impulzIA</span>
-    <h2>Base ordenada.<br>Operacion lista<br>para escalar.</h2>
-    <div class="closing-pill">
-      <p><em>La fase piloto dejo resuelta la infraestructura tecnica, la conversion base de la tienda y la capacidad de responder mejor a la demanda.</em></p>
+  <!-- CONDICIONES COMERCIALES -->
+  <section class="section-clean" id="condiciones">
+    <div class="section-body section-body--narrow">
+      <div class="section-heading">
+        <h2 class="section-title">Condiciones</h2>
+        <div class="section-underline"></div>
+      </div>
+      <ul>
+        <li>50% para iniciar</li>
+        <li>50% contra entrega previa a publicación o al cierre del desarrollo</li>
+        <li>El proyecto contempla una ronda razonable de ajustes sobre lo implementado</li>
+        <li>Cambios estructurales o fuera del alcance inicial se cotizan aparte</li>
+      </ul>
     </div>
-    <span class="closing-url">impulzIA · Paz Cornu · Marzo 2026</span>
+  </section>
+
+  <!-- OBSERVACIÓN IMPORTANTE PARA ÓPTICAS -->
+  <section class="section-clean" id="observacion">
+    <div class="section-body section-body--narrow">
+      <div class="section-heading">
+        <h2 class="section-title">Consideración especial para ópticas</h2>
+        <div class="section-underline"></div>
+      </div>
+      <p>Si el proyecto requiere funciones especiales como carga de receta oftalmológica, selección avanzada de cristales, personalización técnica de lentes o validaciones complejas de graduación, será necesario evaluar ese desarrollo por separado, ya que excede el alcance estándar de una tienda online tradicional.</p>
+    </div>
+  </section>
+
+  <!-- CIERRE -->
+  <section class="section-clean" id="cierre">
+    <div class="section-body section-body--narrow">
+      <div class="section-heading">
+        <h2 class="section-title">Base lista para vender, cobrar y crecer</h2>
+        <div class="section-underline"></div>
+      </div>
+      <div class="closing-pill">
+        <p><em>Esta propuesta busca no solo desarrollar una tienda online, sino dejar una base comercial lista para vender, cobrar, administrar y crecer.</em></p>
+      </div>
+      <div style="margin-top:24px; font-size:1.08rem; color:#17233b; font-weight:700;">ImpulzIA<br>Desarrollo e-commerce · automatización · performance · conversión</div>
+    </div>
   </section>
 
   <script src="script.js"></script>
