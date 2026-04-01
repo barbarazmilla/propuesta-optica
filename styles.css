@@ -263,49 +263,50 @@
   box-shadow: 0 8px 32px rgba(50,104,255,0.07), 0 1.5px 8px rgba(23,35,59,0.07);
   padding: 38px 32px 32px 32px;
   flex: 1 1 340px;
-  @media (max-width: 900px) {
-    .proposal-header-content {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      padding: 18px 10px 8px 10px;
-    }
-    .proposal-header-logo {
-      height: 36px;
-    }
-    .proposal-title {
-      font-size: 1.18rem;
-    }
-    .proposal-date {
-      font-size: 0.93rem;
-    }
-    .proposal-index {
-      gap: 7px 10px;
-      font-size: 0.93rem;
-      margin-left: 0;
-    }
-    .hero-section {
-      padding: 32px 0 18px 0;
-      min-height: 180px;
-    }
-    .hero-logo {
-      height: 28px;
-    }
-    .hero-section h1 {
-      font-size: 1.25rem;
-    }
-    .hero-section h1 span {
-      font-size: 1rem;
-    }
-    .hero-sub {
-      font-size: 0.98rem;
-    }
-    .hero-btn {
-      font-size: 0.98rem;
-      padding: 10px 18px;
-    }
-  }
   gap: 10px;
+}
+
+@media (max-width: 900px) {
+  .proposal-header-content {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 18px 10px 8px 10px;
+  }
+  .proposal-header-logo {
+    height: 36px;
+  }
+  .proposal-title {
+    font-size: 1.18rem;
+  }
+  .proposal-date {
+    font-size: 0.93rem;
+  }
+  .proposal-index {
+    gap: 7px 10px;
+    font-size: 0.93rem;
+    margin-left: 0;
+  }
+  .hero-section {
+    padding: 32px 0 18px 0;
+    min-height: 180px;
+  }
+  .hero-logo {
+    height: 28px;
+  }
+  .hero-section h1 {
+    font-size: 1.25rem;
+  }
+  .hero-section h1 span {
+    font-size: 1rem;
+  }
+  .hero-sub {
+    font-size: 0.98rem;
+  }
+  .hero-btn {
+    font-size: 0.98rem;
+    padding: 10px 18px;
+  }
 }
 .platform-card li {
   font-size: 1.01rem;
