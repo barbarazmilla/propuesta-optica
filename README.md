@@ -1,7 +1,7 @@
 # Reporte de Implementación y Mejoras
 
-**Cliente:** PAZ CORNÚ  
-**Agencia:** ImpulzIA  
+**Cliente:** Cristal Depot  
+**Agencia:** Impulzia  
 **Fecha:** Marzo 2026
 
 ## 🎯 Resumen Ejecutivo
