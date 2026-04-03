@@ -639,6 +639,10 @@ section {
   grid-auto-rows: 1fr;
 }
 
+.card-row--two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
 .card {
   position: relative;
   min-height: auto;
@@ -1695,6 +1699,98 @@ section {
   margin-bottom: 6px;
 }
 
+.section-intro {
+  max-width: 780px;
+  margin: 0 0 24px;
+  font-size: 1.04rem;
+  line-height: 1.72;
+  color: #4f607d;
+}
+
+.offer-group {
+  margin-top: 28px;
+  padding: 28px;
+  border: 1px solid rgba(50, 104, 255, 0.1);
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: var(--shadow-sm);
+}
+
+.offer-group--shopify {
+  background: linear-gradient(180deg, rgba(238, 244, 255, 0.96) 0%, rgba(255, 255, 255, 0.86) 100%);
+  border-color: rgba(50, 104, 255, 0.16);
+}
+
+.offer-group-heading {
+  max-width: 780px;
+  margin-bottom: 18px;
+}
+
+.offer-group-heading h3 {
+  margin: 10px 0 8px;
+  font-size: 1.34rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: #17233b;
+}
+
+.offer-group-heading p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.72;
+  color: #4f607d;
+}
+
+.offer-kicker,
+.card-label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(50, 104, 255, 0.16);
+  background: #eaf1ff;
+  color: #3268ff;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.offer-kicker {
+  padding: 7px 12px;
+  font-size: 0.76rem;
+}
+
+.card-label {
+  margin-bottom: 14px;
+  padding: 6px 10px;
+  font-size: 0.72rem;
+}
+
+.card--featured,
+.price-card--spotlight {
+  background: linear-gradient(180deg, #eef4ff 0%, #ffffff 100%);
+  border-color: rgba(50, 104, 255, 0.18);
+}
+
+.feature-list,
+.price-card ul {
+  margin: 16px 0 0;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.price-card li {
+  font-size: 0.98rem;
+  line-height: 1.72;
+  color: #4f607d;
+}
+
+.investment-notes {
+  margin-top: 24px;
+}
+
 #costos .card-row {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
@@ -1709,6 +1805,14 @@ section {
 
 #plazos .pricing-cards {
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+#mensual .pricing-layout {
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+}
+
+#mensual .pricing-cards--single {
+  grid-template-columns: 1fr;
 }
 
 @media (max-width: 900px) {
@@ -1751,6 +1855,26 @@ section {
     width: 36px;
     height: 4px;
     margin-top: 10px;
+  }
+
+  .section-intro,
+  .offer-group-heading p,
+  .price-card li {
+    font-size: 0.98rem;
+  }
+
+  .offer-group {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 22px;
+  }
+
+  .offer-group-heading h3 {
+    font-size: 1.14rem;
+  }
+
+  #mensual .pricing-layout {
+    grid-template-columns: 1fr;
   }
 
   #costos .card-row,
